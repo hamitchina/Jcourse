@@ -6,7 +6,6 @@ package com.company;
 public class TestStatic {
     private int notStatic;
     public static int staticField;
-    int i=1;
 
     public TestStatic(int notStatic, int abc) {
         this.notStatic = notStatic;

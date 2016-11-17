@@ -19,6 +19,7 @@ public class Main {
 //        else
 //            System.out.print("нечетное");
 
+
         /*Season.printSeason(Season.Autumn);
 
         TestStatic one = new TestStatic(7, 1);
@@ -34,10 +35,13 @@ public class Main {
 
         System.out.println(three.getNotStatic() + " " + TestStatic.getStaticField());
         */
+
         NumberHandler handler1 = new NumberHandler();
 
-        handler1.printNumbersWhile(19);
+        //handler1.printNumbersWhile(19);
         //handler1.printNumbersDo(19);
+
+        handler1.findler (15, 1, 1);
 
 
 
