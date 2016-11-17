@@ -30,24 +30,39 @@ public class NumberHandler {
     //5) Написать метод, который возвращает true, если среди 3 переданных чисел
     //   есть числа которые делятся на 3 и на 5 без остатка
 
-    /*int [] numb3 = new int [3];
-
-    public void Findler () {
-        if (numb3 [] % 5 != 0
-                ) {
-            System.out.println("Есть совпадения по условию все три значения кратны 3 и 5");
-        }
-    }*/
-    public boolean findler (int n1, int n2, int n3) {
-        if (
-        (n1 % 5 == 0 && n1 % 3 == 0) || (n2 % 5 == 0 && n2 % 3 == 0) || (n3 % 5 == 0 && n3 % 3 == 0)) {return true;}
-        else {return false;}
-
+    public boolean repetitionFactorChecker (int n1, int n2, int n3) {
+        return (n1 % 5 == 0 && n1 % 3 == 0) || (n2 % 5 == 0 && n2 % 3 == 0) || (n3 % 5 == 0 && n3 % 3 == 0);
     }
+
+    // or
+    //проверка числа на кратность
+    public boolean repChecker(int var){
+        return var % 5 == 0 && var % 3 ==0;
+    }
+    //вызов метода в методе для проверки чисел из массива на кратность
+    public boolean repCheckerArr(int [] var){
+        boolean result = false;
+        for (int i = 0; i < var.length; i++){
+            if (repChecker(var[i])) result = true;
+        }
+        return result;
+    }
+
 
 //6) Написать метод, который будет складывать значение итеративной переменной с каждым шагом итерации и выведет результат в консоль
 
-    
-//7) Написать метод, в котором итерация будет происхдить с отрицательным шагом
+    public void increasing() {
+        int inc = 0;
+        for (int i = 0; i < 5; i++)
+            inc += i;
+        System.out.println(inc);
+    }
 
+//7) Написать метод, в котором итерация будет происхдить с отрицательным шагом
+    public void decreasing() {
+        int dec = 0;
+        for (int i = 5; i > 0; i--)
+            dec += i;
+        System.out.println(dec);
+    }
 }
